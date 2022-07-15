@@ -1,18 +1,28 @@
 #include <math.h>
 #include "kmeans.h"
 
-void kmeans(float *centroids_x, float *centroids_y){
+void kmeans(void){
     /* The Cluster that the data belongs to */
     int data_cluster_id[DATA_LENGTH];
+
+    /* Varaibles for loops */
+    int i;
+    int j;
+	
+	/* Variables for Centroids */
+	float centroids_x[K];
+    float centroids_y[K];
+    
+    /* Intialize the Centroids, Here it should be Random */
+    for(i = 0; i < K; i++){
+    	centroids_x[i] = i;
+    	centroids_y[i] = i;
+    }
 
     /* Start the KMeans Clustering Algorithm */
     /* The stopping condition should be until centroids dont change. Here I set it to run for a certain iteration */
     int interation;
     for(interation = 0; interation < N_INTERATION; interation++){
-
-        /* Varaibles for loops */
-        int i;
-        int j;
     
         /* First, calculate the distance between points and centroids, and assign the points to the closest centroids cluster */
         for(i = 0; i < DATA_LENGTH; i++){
