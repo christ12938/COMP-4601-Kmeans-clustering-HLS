@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include "kmeans.h"
 
+/* Variables for Centroids */
+float centroids_x[K];
+float centroids_y[K];
+
 int main(){
 
     /* Call the KMeans Function */
@@ -8,8 +12,6 @@ int main(){
 
     /* Print the Coordinates of Centroids*/
     int i;
-    float centroids_x[K];
-    float centroids_y[K];
     for(i = 0; i < K; i++){
         printf("Cluster %d: x = %f, y = %f\n", (i + 1), centroids_x[i], centroids_y[i]);
     }

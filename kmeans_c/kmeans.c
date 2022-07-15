@@ -1,6 +1,10 @@
 #include <math.h>
 #include "kmeans.h"
 
+/* Variables for Centroids */
+float centroids_x[K];
+float centroids_y[K];
+
 void kmeans(void){
     /* The Cluster that the data belongs to */
     int data_cluster_id[DATA_LENGTH];
@@ -8,10 +12,6 @@ void kmeans(void){
     /* Varaibles for loops */
     int i;
     int j;
-	
-	/* Variables for Centroids */
-	float centroids_x[K];
-    float centroids_y[K];
     
     /* Intialize the Centroids, Here it should be Random */
     for(i = 0; i < K; i++){
