@@ -1,0 +1,5 @@
+kmeans_sdiv_18s_3cud
+kmeans_x_data_V
+kmeans_y_data_V
+kmeans_data_clustbkb
+kmeans

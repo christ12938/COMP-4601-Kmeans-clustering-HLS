@@ -1,0 +1,5 @@
+1 - Original Code
+2 - Reduced N size in kmeans.h
+3 - Changed the function pow to abs, since comparing distance is this way is less costly
+4 - Changed all float types to fixed width
+5 - Changed all int to unsigned short

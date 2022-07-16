@@ -1,0 +1,9 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../kmeans_tb.cpp in debug mode
+   Compiling ../../../../kmeans.cpp in debug mode
+   Generating csim.exe
+Cluster 1: x = -0.950602, y = -1.065545
+Cluster 2: x = 2.028218, y = 1.911065
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

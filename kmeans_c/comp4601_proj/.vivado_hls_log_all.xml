@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'pow_generic_double_s' consists of the following:&#xD;&#xA;&#x9;'mul' operation of DSP[253] ('r.V', r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:592) [250]  (3.36 ns)&#xD;&#xA;&#x9;'add' operation of DSP[253] ('ret.V', r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:592) [253]  (3.02 ns)&#xD;&#xA;&#x9;'icmp' operation ('icmp_ln805', r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:592) [257]  (2.43 ns)&#xD;&#xA;&#x9;'select' operation ('select_ln805', r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:592) [259]  (0 ns)&#xD;&#xA;&#x9;'select' operation ('r_exp.V', r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:592) [260]  (0.7 ns)" projectName="comp4601_proj" solutionName="2-reduced-n-size" date="2022-07-16T10:33:24.199+1000" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.514ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="comp4601_proj" solutionName="2-reduced-n-size" date="2022-07-16T10:33:24.192+1000" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'pow_generic&lt;double>' to 'pow_generic_double_s'." projectName="comp4601_proj" solutionName="2-reduced-n-size" date="2022-07-16T10:33:23.593+1000" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'pow_reduce::pow_generic&lt;double>' to 'pow_generic&lt;double>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:320)" projectName="comp4601_proj" solutionName="2-reduced-n-size" date="2022-07-16T10:33:23.225+1000" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'pow_generic_double_s' consists of the following:&#xD;&#xA;&#x9;'mul' operation of DSP[253] ('r.V', r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:592) [250]  (3.36 ns)&#xD;&#xA;&#x9;'add' operation of DSP[253] ('ret.V', r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:592) [253]  (3.02 ns)&#xD;&#xA;&#x9;'icmp' operation ('icmp_ln805', r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:592) [257]  (2.43 ns)&#xD;&#xA;&#x9;'select' operation ('select_ln805', r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:592) [259]  (0 ns)&#xD;&#xA;&#x9;'select' operation ('r_exp.V', r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:592) [260]  (0.7 ns)" projectName="comp4601_proj" solutionName="1-original-code" date="2022-07-16T10:30:25.480+1000" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.514ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="comp4601_proj" solutionName="1-original-code" date="2022-07-16T10:30:25.473+1000" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'pow_generic&lt;double>' to 'pow_generic_double_s'." projectName="comp4601_proj" solutionName="1-original-code" date="2022-07-16T10:30:24.878+1000" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'pow_reduce::pow_generic&lt;double>' to 'pow_generic&lt;double>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:320)" projectName="comp4601_proj" solutionName="1-original-code" date="2022-07-16T10:30:24.509+1000" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

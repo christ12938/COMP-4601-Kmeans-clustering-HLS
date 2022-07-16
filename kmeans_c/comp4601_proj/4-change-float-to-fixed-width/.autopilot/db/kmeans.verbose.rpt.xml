@@ -1,0 +1,202 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'kmeans'" level="0">
+<item name = "Date">Sat Jul 16 10:54:04 2022
+</item>
+<item name = "Version">2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)</item>
+<item name = "Project">comp4601_proj</item>
+<item name = "Solution">4-change-float-to-fixed-width</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.457 ns, 1.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">412, 452, 4.120 us, 4.520 us, 412, 452, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">2, 2, 1, -, -, 2, no</column>
+<column name="- Loop 2">200, 200, 4, -, -, 50, no</column>
+<column name="- Loop 3">206, 246, 103 ~ 123, -, -, 2, no</column>
+<column name=" + Loop 3.1">100, 100, 2, -, -, 50, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 595, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 788, 476, -</column>
+<column name="Memory">0, -, 28, 23, 0</column>
+<column name="Multiplexer">-, -, -, 313, -</column>
+<column name="Register">-, -, 262, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, 1, 2, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="kmeans_sdiv_18s_3cud_U1">kmeans_sdiv_18s_3cud, 0, 0, 394, 238, 0</column>
+<column name="kmeans_sdiv_18s_3cud_U2">kmeans_sdiv_18s_3cud, 0, 0, 394, 238, 0</column>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="data_cluster_id_U">kmeans_data_clustbkb, 0, 2, 1, 0, 50, 1, 1, 50</column>
+<column name="x_data_V_U">kmeans_x_data_V, 0, 13, 11, 0, 50, 13, 1, 650</column>
+<column name="y_data_V_U">kmeans_y_data_V, 0, 13, 11, 0, 50, 13, 1, 650</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln30_fu_298_p2">+, 0, 0, 15, 6, 1</column>
+<column name="add_ln44_fu_447_p2">+, 0, 0, 10, 2, 1</column>
+<column name="add_ln49_fu_459_p2">+, 0, 0, 15, 6, 1</column>
+<column name="add_ln53_fu_528_p2">+, 0, 0, 39, 32, 1</column>
+<column name="add_ln703_1_fu_430_p2">+, 0, 0, 24, 17, 17</column>
+<column name="add_ln703_2_fu_512_p2">+, 0, 0, 24, 17, 17</column>
+<column name="add_ln703_3_fu_522_p2">+, 0, 0, 24, 17, 17</column>
+<column name="add_ln703_fu_370_p2">+, 0, 0, 24, 17, 17</column>
+<column name="i_fu_262_p2">+, 0, 0, 10, 2, 1</column>
+<column name="sub_ln703_1_fu_343_p2">-, 0, 0, 24, 17, 17</column>
+<column name="sub_ln703_2_fu_376_p2">-, 0, 0, 24, 17, 17</column>
+<column name="sub_ln703_3_fu_403_p2">-, 0, 0, 24, 17, 17</column>
+<column name="sub_ln703_4_fu_326_p2">-, 0, 0, 24, 1, 17</column>
+<column name="sub_ln703_5_fu_356_p2">-, 0, 0, 24, 1, 17</column>
+<column name="sub_ln703_6_fu_389_p2">-, 0, 0, 24, 1, 17</column>
+<column name="sub_ln703_7_fu_416_p2">-, 0, 0, 24, 1, 17</column>
+<column name="sub_ln703_fu_313_p2">-, 0, 0, 24, 17, 17</column>
+<column name="data_cluster_id_d0">icmp, 0, 0, 18, 17, 17</column>
+<column name="icmp_ln19_fu_256_p2">icmp, 0, 0, 9, 2, 3</column>
+<column name="icmp_ln30_fu_292_p2">icmp, 0, 0, 11, 6, 5</column>
+<column name="icmp_ln44_fu_441_p2">icmp, 0, 0, 9, 2, 3</column>
+<column name="icmp_ln49_fu_453_p2">icmp, 0, 0, 11, 6, 5</column>
+<column name="icmp_ln50_fu_502_p2">icmp, 0, 0, 8, 2, 2</column>
+<column name="icmp_ln57_fu_472_p2">icmp, 0, 0, 18, 32, 1</column>
+<column name="select_ln4_1_fu_362_p3">select, 0, 0, 17, 1, 17</column>
+<column name="select_ln4_2_fu_395_p3">select, 0, 0, 17, 1, 17</column>
+<column name="select_ln4_3_fu_422_p3">select, 0, 0, 17, 1, 17</column>
+<column name="select_ln4_fu_332_p3">select, 0, 0, 17, 1, 17</column>
+<column name="select_ln50_1_fu_542_p3">select, 0, 0, 17, 1, 17</column>
+<column name="select_ln50_2_fu_550_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln50_fu_534_p3">select, 0, 0, 17, 1, 17</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">145, 32, 1, 32</column>
+<column name="centroids_x_V_address0">15, 3, 1, 3</column>
+<column name="centroids_x_V_address1">15, 3, 1, 3</column>
+<column name="centroids_y_V_address0">15, 3, 1, 3</column>
+<column name="centroids_y_V_address1">15, 3, 1, 3</column>
+<column name="data_cluster_id_address0">15, 3, 6, 18</column>
+<column name="i_1_0_reg_186">9, 2, 6, 12</column>
+<column name="i_2_0_reg_197">9, 2, 2, 4</column>
+<column name="i_op_assign_0_reg_244">9, 2, 32, 64</column>
+<column name="j_1_0_reg_233">9, 2, 6, 12</column>
+<column name="p_Val2_13_0_reg_209">9, 2, 17, 34</column>
+<column name="p_Val2_15_0_reg_221">9, 2, 17, 34</column>
+<column name="p_Val2_s_reg_175">9, 2, 2, 4</column>
+<column name="x_data_V_address0">15, 3, 6, 18</column>
+<column name="y_data_V_address0">15, 3, 6, 18</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln30_reg_605">6, 0, 6, 0</column>
+<column name="add_ln44_reg_648">2, 0, 2, 0</column>
+<column name="add_ln49_reg_656">6, 0, 6, 0</column>
+<column name="add_ln703_1_reg_640">17, 0, 17, 0</column>
+<column name="add_ln703_reg_635">17, 0, 17, 0</column>
+<column name="ap_CS_fsm">31, 0, 31, 0</column>
+<column name="centroids_x_V_load_1_reg_592">17, 0, 17, 0</column>
+<column name="centroids_x_V_load_reg_582">17, 0, 17, 0</column>
+<column name="centroids_y_V_load_1_reg_597">17, 0, 17, 0</column>
+<column name="centroids_y_V_load_reg_587">17, 0, 17, 0</column>
+<column name="i_1_0_reg_186">6, 0, 6, 0</column>
+<column name="i_2_0_reg_197">2, 0, 2, 0</column>
+<column name="i_op_assign_0_reg_244">32, 0, 32, 0</column>
+<column name="icmp_ln57_reg_676">1, 0, 1, 0</column>
+<column name="j_1_0_reg_233">6, 0, 6, 0</column>
+<column name="p_Val2_13_0_reg_209">17, 0, 17, 0</column>
+<column name="p_Val2_15_0_reg_221">17, 0, 17, 0</column>
+<column name="p_Val2_s_reg_175">2, 0, 2, 0</column>
+<column name="x_data_V_load_reg_625">13, 0, 13, 0</column>
+<column name="y_data_V_load_reg_630">13, 0, 13, 0</column>
+<column name="zext_ln31_reg_610">6, 0, 64, 58</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, kmeans, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, kmeans, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, kmeans, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, kmeans, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, kmeans, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, kmeans, return value</column>
+<column name="centroids_x_V_address0">out, 1, ap_memory, centroids_x_V, array</column>
+<column name="centroids_x_V_ce0">out, 1, ap_memory, centroids_x_V, array</column>
+<column name="centroids_x_V_we0">out, 1, ap_memory, centroids_x_V, array</column>
+<column name="centroids_x_V_d0">out, 17, ap_memory, centroids_x_V, array</column>
+<column name="centroids_x_V_q0">in, 17, ap_memory, centroids_x_V, array</column>
+<column name="centroids_x_V_address1">out, 1, ap_memory, centroids_x_V, array</column>
+<column name="centroids_x_V_ce1">out, 1, ap_memory, centroids_x_V, array</column>
+<column name="centroids_x_V_we1">out, 1, ap_memory, centroids_x_V, array</column>
+<column name="centroids_x_V_d1">out, 17, ap_memory, centroids_x_V, array</column>
+<column name="centroids_x_V_q1">in, 17, ap_memory, centroids_x_V, array</column>
+<column name="centroids_y_V_address0">out, 1, ap_memory, centroids_y_V, array</column>
+<column name="centroids_y_V_ce0">out, 1, ap_memory, centroids_y_V, array</column>
+<column name="centroids_y_V_we0">out, 1, ap_memory, centroids_y_V, array</column>
+<column name="centroids_y_V_d0">out, 17, ap_memory, centroids_y_V, array</column>
+<column name="centroids_y_V_q0">in, 17, ap_memory, centroids_y_V, array</column>
+<column name="centroids_y_V_address1">out, 1, ap_memory, centroids_y_V, array</column>
+<column name="centroids_y_V_ce1">out, 1, ap_memory, centroids_y_V, array</column>
+<column name="centroids_y_V_we1">out, 1, ap_memory, centroids_y_V, array</column>
+<column name="centroids_y_V_d1">out, 17, ap_memory, centroids_y_V, array</column>
+<column name="centroids_y_V_q1">in, 17, ap_memory, centroids_y_V, array</column>
+</table>
+</item>
+</section>
+</profile>
