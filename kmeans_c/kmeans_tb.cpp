@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "kmeans.h"
 
+using namespace std;
+
 /* Variables for Centroids */
 float centroids_x[K];
 float centroids_y[K];
