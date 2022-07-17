@@ -1,20 +1,7 @@
-
-****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
-  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
-  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
-
-source E:/Xilinx/Vivado/2020.1/scripts/vivado_hls/hls.tcl -notrace
-INFO: Applying HLS Y2K22 patch v1.2 for IP revision
-INFO: [HLS 200-10] Running 'E:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/vivado_hls.exe'
-INFO: [HLS 200-10] For user 'Alex Wan' on host 'desktop-aagu0qj' (Windows NT_amd64 version 6.2) on Sun Jul 17 21:32:38 +1000 2022
-INFO: [HLS 200-10] In directory 'D:/comp4601-project/kmeans_c'
-Sourcing Tcl script 'kmeans_proj.tcl'
-INFO: [HLS 200-10] Creating and opening project 'D:/comp4601-project/kmeans_c/kmeans_proj'.
-INFO: [HLS 200-10] Adding design file 'kmeans.cpp' to the project
-INFO: [HLS 200-10] Adding design file 'kmeans.h' to the project
-INFO: [HLS 200-10] Adding test bench file 'kmeans_tb.cpp' to the project
-INFO: [HLS 200-10] Creating and opening solution 'D:/comp4601-project/kmeans_c/kmeans_proj/solution1'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
 INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.

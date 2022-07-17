@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="kmeans.h" path="D:\comp4601-project\kmeans_c\kmeans.h"/>
+    <originFiles name="kmeans.cpp" path="D:\comp4601-project\kmeans_c\kmeans.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="kmeans_tb.cpp" path="D:\comp4601-project\kmeans_c\kmeans_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
