@@ -27,10 +27,10 @@ void kmeans(void){
     for(interation = 0; interation < N_INTERATION; interation++){
     
         /* First, calculate the distance between points and centroids, and assign the points to the closest centroids cluster */
-        for(i = 0; i < DATA_LENGTH; i++){
+        kmeans_distance_outer:for(i = 0; i < DATA_LENGTH; i++){
         	FIXED_WIDTH min_distance = abs_custom((x_data[i] - centroids_x[0])) + abs_custom((y_data[i] - centroids_y[0]));
         	TRIVIAL_TYPE closest_centroid_index = 0;
-            for(j = 1; j < K; j++){
+            kmeans_distance_inner:for(j = 1; j < K; j++){
             	FIXED_WIDTH distance = abs_custom((x_data[i] - centroids_x[j])) + abs_custom((y_data[i] - centroids_y[j]));
                 if(distance < min_distance){
                     min_distance = distance;

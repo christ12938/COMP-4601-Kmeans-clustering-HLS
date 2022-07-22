@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'kmeans' consists of the following:&#xD;&#xA;&#x9;'call' operation ('p_022_2', kmeans.cpp:31) to 'abs_custom' [58]  (6.35 ns)&#xD;&#xA;&#x9;'add' operation ('add_ln703_52', kmeans.cpp:31) [61]  (2.11 ns)&#xD;&#xA;&#x9;'icmp' operation ('icmp_ln1495_2', kmeans.cpp:35) [67]  (2.43 ns)" projectName="kmeans_proj" solutionName="solution5" date="2022-07-22T17:50:12.496+1000" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (10.8896ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="kmeans_proj" solutionName="solution5" date="2022-07-22T17:50:12.490+1000" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'kmeans' consists of the following:&#xD;&#xA;&#x9;'call' operation ('p_s', kmeans.cpp:31) to 'abs_custom' [45]  (6.25 ns)&#xD;&#xA;&#x9;'add' operation ('add_ln703', kmeans.cpp:31) [51]  (2.11 ns)&#xD;&#xA;&#x9;'icmp' operation ('icmp_ln1495', kmeans.cpp:35) [57]  (2.43 ns)" projectName="kmeans_proj" solutionName="solution4" date="2022-07-22T17:48:53.708+1000" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (10.7837ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="kmeans_proj" solutionName="solution4" date="2022-07-22T17:48:53.680+1000" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'kmeans' consists of the following:&#xD;&#xA;&#x9;'call' operation ('p_s', kmeans.cpp:31) to 'abs_custom' [44]  (5.89 ns)&#xD;&#xA;&#x9;'add' operation ('add_ln703', kmeans.cpp:31) [50]  (2.11 ns)&#xD;&#xA;&#x9;'icmp' operation ('icmp_ln1495', kmeans.cpp:35) [56]  (2.43 ns)" projectName="kmeans_proj" solutionName="solution3" date="2022-07-22T16:05:41.196+1000" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (10.4289ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="kmeans_proj" solutionName="solution3" date="2022-07-22T16:05:41.191+1000" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

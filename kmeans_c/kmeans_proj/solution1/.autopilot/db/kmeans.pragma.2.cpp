@@ -6355,8 +6355,15 @@ inline bool operator!=(
 
 }
 # 399 "E:/Xilinx/Vivado/2020.1/common/technology/autopilot\\ap_fixed.h" 2
-# 4 "./kmeans.h" 2
-# 13 "./kmeans.h"
+# 5 "./kmeans.h" 2
+
+
+
+
+
+
+
+
 typedef ap_fixed<17, 7> FIXED_WIDTH;
 
 
@@ -6405,7 +6412,7 @@ void kmeans(void){
         for(i = 0; i < 50; i++){
          FIXED_WIDTH min_distance = abs_custom((x_data[i] - centroids_x[0])) + abs_custom((y_data[i] - centroids_y[0]));
          TRIVIAL_TYPE closest_centroid_index = 0;
-            for(j = 1; j < 2; j++){
+            kmeans_distance_inner:for(j = 1; j < 2; j++){
              FIXED_WIDTH distance = abs_custom((x_data[i] - centroids_x[j])) + abs_custom((y_data[i] - centroids_y[j]));
                 if(distance < min_distance){
                     min_distance = distance;

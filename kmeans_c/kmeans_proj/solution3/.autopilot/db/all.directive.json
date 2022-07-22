@@ -1,0 +1,23 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "kmeans",
+          "label": "kmeans_distance_inner",
+          "functionLabel": "",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "kmeans",
+          "label": "kmeans_distance_outer",
+          "functionLabel": "",
+          "pragma": {
+            "name": "UNROLL",
+            "option": [{
+                "name": "factor",
+                "value": "10"
+              }]
+          }
+        }
+      ]
+    }]}

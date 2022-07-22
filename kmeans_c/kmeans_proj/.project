@@ -42,6 +42,26 @@
 			<location>D:/comp4601-project/kmeans_c/kmeans_proj/solution1/.tcls</location>
 		</link>
 		<link>
+			<name>solution2/constraints</name>
+			<type>2</type>
+			<location>D:/comp4601-project/kmeans_c/kmeans_proj/solution2/.tcls</location>
+		</link>
+		<link>
+			<name>solution3/constraints</name>
+			<type>2</type>
+			<location>D:/comp4601-project/kmeans_c/kmeans_proj/solution3/.tcls</location>
+		</link>
+		<link>
+			<name>solution4/constraints</name>
+			<type>2</type>
+			<location>D:/comp4601-project/kmeans_c/kmeans_proj/solution4/.tcls</location>
+		</link>
+		<link>
+			<name>solution5/constraints</name>
+			<type>2</type>
+			<location>D:/comp4601-project/kmeans_c/kmeans_proj/solution5/.tcls</location>
+		</link>
+		<link>
 			<name>source/kmeans.cpp</name>
 			<type>1</type>
 			<location>D:/comp4601-project/kmeans_c/kmeans.cpp</location>
@@ -70,6 +90,66 @@
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
 			<location>D:/comp4601-project/kmeans_c/kmeans_proj/solution1/script.tcl</location>
+		</link>
+		<link>
+			<name>solution2/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>D:/comp4601-project/kmeans_c/kmeans_proj/solution2/solution2.directive</location>
+		</link>
+		<link>
+			<name>solution2/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>D:/comp4601-project/kmeans_c/kmeans_proj/solution2/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution2/constraints/script.tcl</name>
+			<type>1</type>
+			<location>D:/comp4601-project/kmeans_c/kmeans_proj/solution2/script.tcl</location>
+		</link>
+		<link>
+			<name>solution3/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>D:/comp4601-project/kmeans_c/kmeans_proj/solution3/solution3.directive</location>
+		</link>
+		<link>
+			<name>solution3/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>D:/comp4601-project/kmeans_c/kmeans_proj/solution3/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution3/constraints/script.tcl</name>
+			<type>1</type>
+			<location>D:/comp4601-project/kmeans_c/kmeans_proj/solution3/script.tcl</location>
+		</link>
+		<link>
+			<name>solution4/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>D:/comp4601-project/kmeans_c/kmeans_proj/solution4/solution4.directive</location>
+		</link>
+		<link>
+			<name>solution4/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>D:/comp4601-project/kmeans_c/kmeans_proj/solution4/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution4/constraints/script.tcl</name>
+			<type>1</type>
+			<location>D:/comp4601-project/kmeans_c/kmeans_proj/solution4/script.tcl</location>
+		</link>
+		<link>
+			<name>solution5/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>D:/comp4601-project/kmeans_c/kmeans_proj/solution5/solution5.directive</location>
+		</link>
+		<link>
+			<name>solution5/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>D:/comp4601-project/kmeans_c/kmeans_proj/solution5/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution5/constraints/script.tcl</name>
+			<type>1</type>
+			<location>D:/comp4601-project/kmeans_c/kmeans_proj/solution5/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

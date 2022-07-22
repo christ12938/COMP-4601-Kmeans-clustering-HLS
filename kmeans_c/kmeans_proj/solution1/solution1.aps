@@ -1,4 +1,7 @@
 <AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <config>
+        <schedule model="kmeans"/>
+    </config>
     <name>
         <value string="solution1"/>
     </name>
@@ -13,10 +16,7 @@
         <library value="xilinx/zynq/zynq_fpv6" name="DefaultPlatform"/>
     </libraryList>
     <clockList>
-        <clock name="default" period="10" default="false"/>
+        <clock name="default" default="false" period="10"/>
     </clockList>
-    <config>
-        <schedule model="kmeans"/>
-    </config>
 </AutoPilot:solution>
 

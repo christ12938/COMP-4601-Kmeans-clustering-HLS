@@ -1,0 +1,127 @@
+<stg><name>abs_custom</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="2" bw="17" op_0_bw="17" op_1_bw="17">
+<![CDATA[
+_ZltILi17ELi7ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEbRK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EEi.exit:0  %number_V_read = call i17 @_ssdm_op_Read.ap_auto.i17(i17 %number_V)
+
+]]></Node>
+<StgValue><ssdm name="number_V_read"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="1" op_0_bw="1" op_1_bw="17" op_2_bw="32">
+<![CDATA[
+_ZltILi17ELi7ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEbRK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EEi.exit:1  %tmp = call i1 @_ssdm_op_BitSelect.i1.i17.i32(i17 %number_V_read, i32 16)
+
+]]></Node>
+<StgValue><ssdm name="tmp"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>AddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="tmp" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="17" op_0_bw="17" op_1_bw="17">
+<![CDATA[
+_ZltILi17ELi7ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEbRK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EEi.exit:2  %sub_ln703 = sub i17 0, %number_V_read
+
+]]></Node>
+<StgValue><ssdm name="sub_ln703"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>Sel</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="17" op_0_bw="1" op_1_bw="17" op_2_bw="17">
+<![CDATA[
+_ZltILi17ELi7ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEbRK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EEi.exit:3  %select_ln4 = select i1 %tmp, i17 %sub_ln703, i17 %number_V_read
+
+]]></Node>
+<StgValue><ssdm name="select_ln4"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="0" op_0_bw="17">
+<![CDATA[
+_ZltILi17ELi7ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEbRK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EEi.exit:4  ret i17 %select_ln4
+
+]]></Node>
+<StgValue><ssdm name="ret_ln7"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="7" name="number_V" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="number_V"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="9" from="_ssdm_op_Read.ap_auto.i17" to="number_V_read" fromId="8" toId="2">
+</dataflow>
+<dataflow id="10" from="number_V" to="number_V_read" fromId="7" toId="2">
+</dataflow>
+<dataflow id="12" from="_ssdm_op_BitSelect.i1.i17.i32" to="tmp" fromId="11" toId="3">
+</dataflow>
+<dataflow id="13" from="number_V_read" to="tmp" fromId="2" toId="3">
+</dataflow>
+<dataflow id="15" from="StgValue_14" to="tmp" fromId="14" toId="3">
+</dataflow>
+<dataflow id="17" from="StgValue_16" to="sub_ln703" fromId="16" toId="4">
+</dataflow>
+<dataflow id="18" from="number_V_read" to="sub_ln703" fromId="2" toId="4">
+</dataflow>
+<dataflow id="19" from="tmp" to="select_ln4" fromId="3" toId="5">
+</dataflow>
+<dataflow id="20" from="sub_ln703" to="select_ln4" fromId="4" toId="5">
+</dataflow>
+<dataflow id="21" from="number_V_read" to="select_ln4" fromId="2" toId="5">
+</dataflow>
+<dataflow id="22" from="select_ln4" to="ret_ln7" fromId="5" toId="6">
+</dataflow>
+<dataflow id="23" from="tmp" to="StgValue_1" fromId="3" toId="1">
+</dataflow>
+</dataflows>
+
+
+</stg>

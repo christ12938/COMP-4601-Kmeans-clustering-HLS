@@ -1,0 +1,9 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "kmeans",
+          "label": "kmeans_distance_inner",
+          "functionLabel": "",
+          "pragma": {"name": "UNROLL"}
+        }]
+    }]}

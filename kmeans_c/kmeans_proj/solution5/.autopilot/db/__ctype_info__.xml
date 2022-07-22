@@ -1,0 +1,23 @@
+<InterfaceSummary>
+<RtlPorts>
+<name>centroids_x_V</name>
+<CType>
+<TypeName>ap_fixed 17 7 5 3 0</TypeName>
+<TypeWidth>17</TypeWidth>
+<PhysicalWidth>17</PhysicalWidth>
+</CType>
+<CFractionWidth>10</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>centroids_y_V</name>
+<CType>
+<TypeName>ap_fixed 17 7 5 3 0</TypeName>
+<TypeWidth>17</TypeWidth>
+<PhysicalWidth>17</PhysicalWidth>
+</CType>
+<CFractionWidth>10</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+</InterfaceSummary>
+

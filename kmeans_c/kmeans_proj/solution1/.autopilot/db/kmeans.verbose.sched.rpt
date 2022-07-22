@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'kmeans'
 ================================================================
-* Date:           Sun Jul 17 21:32:49 2022
+* Date:           Fri Jul 22 15:55:42 2022
 
 * Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
 * Project:        kmeans_proj
@@ -344,7 +344,6 @@ The critical path consists of the following:
  <State 2>: 2.32ns
 The critical path consists of the following:
 	'phi' operation ('i') with incoming values : ('i', kmeans.cpp:19) [11]  (0 ns)
-	'getelementptr' operation ('centroids_x_V_addr', kmeans.cpp:20) [21]  (0 ns)
 	'store' operation ('store_ln20', kmeans.cpp:20) of variable 'zext_ln728', kmeans.cpp:20 on array 'centroids_x_V' [22]  (2.32 ns)
 
  <State 3>: 2.32ns
