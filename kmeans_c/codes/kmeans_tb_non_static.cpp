@@ -1,5 +1,10 @@
+#include <algorithm>
+#include <array>
+#include <random>
 #include <stdio.h>
-#include "kmeans.h"
+#include "kmeans_non_static.h"
+
+// #DEFINE CHECK_RANDOMISED_INPUTS
 
 using namespace std;
 
@@ -14,6 +19,7 @@ int main(){
 	FIXED_WIDTH y_data[DATA_LENGTH] = {-1.8476304479482155, -1.7033210321178698, -0.3116874828979086, -0.0692708411769553, -0.4883560187321381, -1.042068973249541, -1.347678270033896, -0.0159435843933972, -0.4966284923529751, -1.9060519649071133, -1.182083145951814, -1.9095944798357496, -1.2231140387040584, -0.8430322147628326, -0.4378312919427145, -0.7819214836068338, -1.24812089018845, -0.3141342889081202, -1.8677781397245663, -1.4347124998497078, -1.3098229854129988, -0.9018298497424118, -1.2772029022427571, -1.1447755794013643, -1.5340414984298432, 2.9946847191733035, 1.3741440691051214, 2.9691445112794845, 2.0165175228689094, 2.138925907860298, 1.5125954755495803, 1.2474228418765438, 2.29755183636731, 2.870337471695355, 1.1566224708681752, 2.13026091482972, 1.4080546735340445, 1.081212329617378, 2.241551461340733, 2.7190564478348014, 1.4476722158489428, 1.1608306843611067, 1.40338063020798, 1.3458375613033309, 1.4688775755868546, 2.3158842153684627, 2.323834094814788, 2.467041440511156, 1.2922052051746733, 2.3929873190498654};
 
     /* Call the KMeans Function */
+
     kmeans(x_data, y_data);
 
     /* Print the Coordinates of Centroids*/
@@ -21,6 +27,59 @@ int main(){
     for(i = 0; i < K; i++){
         printf("Cluster %d: x = %f, y = %f\n", (i + 1), float(centroids_x[i]), float(centroids_y[i]));
     }
+
+#ifdef CHECK_RANDOMISED_INPUTS
+    /** Randomising order of points **/
+    // group x and corresponding y coordinate so that shuffle preserves matching pair
+    array<pair<FIXED_WIDTH, FIXED_WIDTH>, DATA_LENGTH> points;
+    for (int i = 0; i < DATA_LENGTH; ++i) {
+        points[i] = std::move(make_pair(x_data[i], y_data[i]));
+    }
+
+    // shuffle points, calculate centroid, compare
+    bool exceeds_tolerance = false;
+    for (int i = 0; i < 1'000'000'000; ++i) {
+        random_shuffle(points.begin(), points.end());
+
+        FIXED_WIDTH new_x_data[DATA_LENGTH];
+        FIXED_WIDTH new_y_data[DATA_LENGTH];
+        
+        for (int i = 0; i < DATA_LENGTH; ++i) {
+            new_x_data[i] = points[i].first;
+            new_y_data[i] = points[i].second;
+        }
+
+        kmeans(new_x_data, new_y_data);
+
+        // since this algorithm is iterative and random, the values will slightly change
+        // here we define a tolerance of 5 decimal places. if the 6th decimal place deviates, we have a problem.
+        if (abs(float(centroids_x[0]) - -0.950195) > 0.000'001 &&
+                abs(float(centroids_y[0]) - -1.06543) > 0.000'001 &&
+                abs(float(centroids_x[1]) - 2.02734) > 0.000'001 &&
+                abs(float(centroids_y[1]) - 1.91016) > 0.000'001) {
+            cout << "Exceeded tolerance margins!!!\n";
+            cout << "Order of x_data is {";
+            for (auto const &i : new_x_data) {
+                cout << i << " , ";
+            }
+            cout << "}\n";
+
+            cout << "Order of y_data is {";
+            for (auto const &i : new_y_data) {
+                cout << i << " , ";
+            }
+            cout << "}\n";
+
+		    cout << "Centroids are (" << float(centroids_x[0]) << " , " << float(centroids_y[0]) << ") (" << float(centroids_x[1]) << " , " << float(centroids_y[1]) << ")\n";
+            exceeds_tolerance = true;
+        }
+    }
+
+    // test results: did not exceed tolerance
+
+    return exceeds_tolerance;
+
+#endif
 
     return 0;
 }

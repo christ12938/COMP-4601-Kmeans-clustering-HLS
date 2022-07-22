@@ -3,3 +3,6 @@
 3 - Changed the function pow to abs, since comparing distance is this way is less costly
 4 - Changed all float types to fixed width
 5 - Changed all int to unsigned short
+
+6 - Changed testbench to shuffle the array and ensure that the centroid is at approximately the same place
+        Awaiting loop unrolling to determine how to partition input arrays
