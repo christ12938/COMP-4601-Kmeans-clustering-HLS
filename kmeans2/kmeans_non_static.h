@@ -5,14 +5,14 @@
 
 #ifdef AP
 #include "ap_fixed.h"
-typedef ap_fixed<17, 7> FIXED_WIDTH;
+typedef ap_fixed<17, 7, AP_TRN, AP_SAT_SYM> FIXED_WIDTH;
 #else
 typedef double FIXED_WIDTH;
 #endif
 
-#define DATA_LENGTH 50
+#define DATA_LENGTH 10
 #define K 2
-#define N_INTERATION 1000
+#define N_INTERATION 100
 
 /* Definition of fixed width type */
 /* Normally the interger bits should be log2(max(data) * DATA_LENGTH * 2) */
