@@ -55,8 +55,8 @@ INTIALIZE_CENTROIDS:
     /* Start the KMeans Clustering Algorithm */
     TRIVIAL_TYPE iteration;
 
-    FIXED_WIDTH mean_value_x[K] = {0};
-	FIXED_WIDTH mean_value_y[K] = {0};
+    FIXED_WIDTH sum_x[K] = {0};
+	FIXED_WIDTH sum_y[K] = {0};
 	TRIVIAL_TYPE count[K] = {0};
 
 	TRIVIAL_TYPE id = 0;
@@ -66,28 +66,40 @@ ITERATION_LOOP:
     for(iteration = 0; iteration < N_INTERATION; iteration++){
     
         /* First, calculate the distance between points and centroids, and assign the points to the closest centroids cluster */
-    	find_closest_centroid(x_data, y_data, data_cluster_id);
+KMEANS_DISTANCE_OUTER:
+		for (i = 0; i < DATA_LENGTH; i++) {
+			// initialize to distance from first centroid is sensible
+			FIXED_WIDTH min_distance = abs_custom((x_data[i] - centroids_x[0])) + abs_custom((y_data[i] - centroids_y[0]));
+			TRIVIAL_TYPE closest_centroid_index = 0;
 
-        /* Then, calculate the mean for points within each cluster, and compute the new centroid */
-CALCULATE_NEW_CENTROID_LOOP:
-        for(i = 0; i < DATA_LENGTH; i++){
-        	id = data_cluster_id[i];
-			mean_value_x[id] = mean_value_x[id] + x_data[i];
-			mean_value_y[id] = mean_value_y[id] + y_data[i];
-			count[id]++;
-        }
+KMEANS_DISTANCE_INNER:
+			for(j = 1; j < K; j++){
+				FIXED_WIDTH distance = abs_custom((x_data[i] - centroids_x[j])) + abs_custom((y_data[i] - centroids_y[j]));
+				if(distance < min_distance){
+					min_distance = distance;
+					closest_centroid_index = j;
+				}
+			}
+
+			// variables to help calculate new centroid position
+			sum_x[closest_centroid_index] = sum_x[closest_centroid_index] + x_data[i];
+			sum_y[closest_centroid_index] = sum_y[closest_centroid_index] + y_data[i];
+			count[closest_centroid_index]++;
+
+			data_cluster_id[i] = closest_centroid_index;
+		}
 
 ASSIGN_NEW_CENTROID_VALUE:
         for (i = 0; i < K; i++) {
             if(count[i] != 0){
-                centroids_x[i] = mean_value_x[i] / count[i];
-                centroids_y[i] = mean_value_y[i] / count[i];
+                centroids_x[i] = sum_x[i] / count[i];
+                centroids_y[i] = sum_y[i] / count[i];
             }
 
-            // reset mean_value_x, y, count for each centroid now since we're looping anyway
+            // reset sum_x, y, count for each centroid now since we're looping anyway
             // this is in preparation for the next loop
-            mean_value_x[i] = 0;
-            mean_value_y[i] = 0;
+            sum_x[i] = 0;
+            sum_y[i] = 0;
             count[i] = 0;
         }
     }
