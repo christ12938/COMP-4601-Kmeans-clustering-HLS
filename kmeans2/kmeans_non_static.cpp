@@ -18,13 +18,13 @@ void kmeans(MODE mode, FIXED_WIDTH x_data[DATA_LENGTH], FIXED_WIDTH y_data[DATA_
 void find_closest_centroid(FIXED_WIDTH x_data[DATA_LENGTH], FIXED_WIDTH y_data[DATA_LENGTH], TRIVIAL_TYPE output[DATA_LENGTH]) {
 	TRIVIAL_TYPE i, j;
 
-OUTER_FIND_CENTROID_LOOP:
+KMEANS_DISTANCE_OUTER:
 	for (i = 0; i < DATA_LENGTH; i++) {
 		// initialize to distance from first centroid is sensible
 		FIXED_WIDTH min_distance = abs_custom((x_data[i] - centroids_x[0])) + abs_custom((y_data[i] - centroids_y[0]));
 		TRIVIAL_TYPE closest_centroid_index = 0;
 
-INNER_FIND_CENTROID_LOOP:
+KMEANS_DISTANCE_INNER:
 		for(j = 1; j < K; j++){
 			FIXED_WIDTH distance = abs_custom((x_data[i] - centroids_x[j])) + abs_custom((y_data[i] - centroids_y[j]));
 			if(distance < min_distance){
@@ -46,6 +46,7 @@ void train(FIXED_WIDTH x_data[DATA_LENGTH], FIXED_WIDTH y_data[DATA_LENGTH]){
 	TRIVIAL_TYPE j;
     
     /* Initialize the Centroids, Here it should be Random */
+INTIALIZE_CENTROIDS:
     for(i = 0; i < K; i++){
     	centroids_x[i] = i;
     	centroids_y[i] = i;
